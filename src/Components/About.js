@@ -18,7 +18,7 @@ const About = () => {
           Confira o canal da CellCarHome no YouTube
         </h1>
         <p className="primary-text">
-          Neste vídeo, você vai conferir os melhores carros de 2023. A melhor parte é que todos eles estão a venda na CellCarHome!
+          Os melhores carros do ano você encontra aqui na CellCarHome!
         </p>
         <p className="primary-text">
             Quer ficar por dentro dos produtos da nossa loja? Nos acompanhe no YouTube e não perca nenhuma novidade!
