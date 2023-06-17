@@ -21,6 +21,8 @@
   
   body {
     background-color: #f6f6f6;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
   
   nav {
@@ -69,12 +71,35 @@
     display: flex;
     padding-top: 3rem;
   }
+  .catalog-banner-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .catalog-text {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    max-width: 500px;
+    color: #303030;
+    margin: 1.5rem 0rem;
+  }
   .home-bannerImage-container {
     position: absolute;
     top: -100px;
     right: -170px;
     z-index: -2;
     max-width: 700px;
+  }
+  .catalog-bannerImage-container {
+    position: absolute;
+    top: -100px;
+    right: -170px;
+    z-index: -2;
+    max-width: 700px;
+    padding-top: 6rem;
+    padding-right: 3rem;
   }
   .home-image-section {
     max-width: 600px;
@@ -87,19 +112,33 @@
     justify-content: center;
     align-items: flex-start;
   }
+  .catalog-text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3rem;
+  }
+
+  .catalog-product-name{
+    font-size: clamp(1rem, 3vw, 3rem);
+    color: #222222;
+  }
+
   .primary-heading {
     font-size: clamp(1rem, 3.6vw, 4rem);
     color: #303030;
     line-height: 3.5rem;
     max-width: 600px;
     margin-top: 2rem;
-  }
+  } 
   .primary-text {
     font-size: clamp(1rem, 3vw, 1.5rem);
     max-width: 500px;
     color: #303030;
     margin: 1.5rem 0rem;
   }
+  
   .secondary-button {
     padding: 1rem 2.5rem;
     background-color: #cb1111;
@@ -286,6 +325,10 @@
   }
 
   @media (max-width: 1000px) {
+    body {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
     .navbar-links-container a {
       margin-right: 1rem;
       font-size: 1rem;
