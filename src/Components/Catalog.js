@@ -7,9 +7,15 @@ import Pixel6ProImage from '../Assets/pixel6-img-catalog.png';
 import OnePlus9ProImage from '../Assets/oneplus9-img-catalog.png';
 import MotorolaGPowerImage from '../Assets/motorolag-img-catalog.png';
 import SonyXperiaImage from '../Assets/sonyxperia-img-catalog.png';
+import FordMustangImage from '../Assets/fordmustang-img-catalog.png';
+import ToyotaCamryImage from '../Assets/toyotacamry-img-catalog.png';
+import BMW3SeriesImage from '../Assets/bmw3-img-catalog.png';
+import HondaCivicImage from '../Assets/hondacivic-img-catalog.png';
+import MercedesBenzImage from '../Assets/mercedesbenz-img-catalog.png';
+import Chevrolet1500Image from '../Assets/chevrolet1500-img-catalog.png'
 
 const Catalog = () => {
-  const catalogInfoData = [
+  const catalogSmartphoneInfoData = [
     {
       image: SamsungS21Image,
       title: "Samsung Galaxy S21 Ultra",
@@ -48,6 +54,45 @@ const Catalog = () => {
     },
   ];
 
+  const catalogCarInfoData = [
+    {
+      image: FordMustangImage,
+      title: "Ford Mustang GT",
+      subtitle: "$70.000",
+      text: "Um icônico carro esportivo com um motor potente e design agressivo. Possui tecnologia avançada e alto desempenho.",
+    },
+    {
+      image: ToyotaCamryImage,
+      title: "Toyota Camry",
+      subtitle: "$25.000",
+      text: "Um sedã elegante e confiável, oferecendo conforto e economia de combustível. Ideal para viagens em família ou uso diário.",
+    },
+    {
+      image: BMW3SeriesImage,
+      title: "BMW 3 Series",
+      subtitle: "$40.000",
+      text: "Um sedan de luxo com design sofisticado, desempenho excepcional e recursos inovadores. Uma combinação perfeita de estilo e potência.",
+    },
+    {
+      image: HondaCivicImage,
+      title: "Honda Civic",
+      subtitle: "$20.000",
+      text: "Um carro compacto e versátil, conhecido por sua confiabilidade e economia. Oferece um interior espaçoso e recursos de segurança avançados.",
+    },
+    {
+      image: MercedesBenzImage,
+      title: "Mercedes-Benz C-Class",
+      subtitle: "$45.000",
+      text: "Um sedan premium que combina elegância e desempenho. Possui interior luxuoso, tecnologia de ponta e uma experiência de condução excepcional.",
+    },
+    {
+      image: Chevrolet1500Image,
+      title: "Chevrolet Silverado 1500",
+      subtitle: "$35.000",
+      text: "Uma picape robusta e confiável, projetada para trabalho pesado. Oferece capacidade de reboque, espaço de carga generoso e recursos de segurança avançados.",
+    },
+  ];
+
   return (
     <>
       <div className='catalog-bannerImage-container'>
@@ -62,24 +107,40 @@ const Catalog = () => {
         <div>
           <img src={BannerImageIphone13} alt="" />
         </div>
-        <div className='catalog-text-section'>
+        <div className='catalog-banner-section'>
           <p className='catalog-Iphone13-name'>Iphone 13 Pro Max</p>
           <p className='catalog-text'>
           O iPhone 13 Pro Max é o carro-chefe da Apple, apresentando um poderoso processador, câmeras de última geração e uma tela impressionante.
           </p>
         </div>
       </div>
-      <div className='work-section-bottom'>
-        {catalogInfoData.map((data) => (
-          <div className="work-section-info" key={data.title}>
-            <div className="info-boxes-img-container">
-              <img src={data.image} alt="" />
+      <div className='catalog-products-section'>
+        <p className="primary-subheading">Smartphones</p>
+        <div className='work-section-bottom'>
+          {catalogSmartphoneInfoData.map((data) => (
+            <div className="work-section-info" key={data.title}>
+              <div className="info-boxes-img-container">
+                <img src={data.image} alt="" />
+              </div>
+            <h2>{data.title}</h2>
+            <div className='catalog-product-price'><p>{data.subtitle}</p></div>
+            <p>{data.text}</p>
             </div>
-           <h2>{data.title}</h2>
-           <div className='catalog-product-price'><p>{data.subtitle}</p></div>
-           <p>{data.text}</p>
-          </div>
-        ))}
+          ))}
+        </div>
+        <p className="primary-subheading">Carros</p>
+        <div className='work-section-bottom'>
+          {catalogCarInfoData.map((data) => (
+            <div className="work-section-info" key={data.title}>
+              <div className="info-boxes-img-container">
+                <img src={data.image} alt="" />
+              </div>
+            <h2>{data.title}</h2>
+            <div className='catalog-product-price'><p>{data.subtitle}</p></div>
+            <p>{data.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
       
     </>

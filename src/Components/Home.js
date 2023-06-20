@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import BannerBackground from "../Assets/home-banner-background.png"
 import BannerImage from "../Assets/home-banner-image.png"
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -19,9 +20,10 @@ const Home = () => {
           <p className='primary-text'>
             Está a procura de uma loja de automóveis, uma corretora de imoveis e uma loja de celulares com serviços de qualidade? A CellCarHome te oferece isso tudo em um só E-Commerce.
           </p>
-          <button className='secondary-button'>
+          <Link to='/catalog' className='secondary-button'>
             Compre agora <FiArrowRight />
-          </button>
+          </Link>
+          
         </div>
         <div className='home-image-container'>
           <img src={BannerImage} alt="" />
