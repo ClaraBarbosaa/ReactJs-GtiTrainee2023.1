@@ -120,11 +120,15 @@
     margin-left: 3rem;
   }
 
-  .catalog-product-name{
+  .catalog-Iphone13-name{
     font-size: clamp(1rem, 3vw, 3rem);
-    color: #222222;
+    color: #cb1111;
+    font-weight: 600;
   }
-
+  .catalog-product-price{
+    font-size: clamp(1.5rem, 2vw, 0.5rem);
+    margin-bottom: 1rem;
+  }
   .primary-heading {
     font-size: clamp(1rem, 3.6vw, 4rem);
     color: #303030;
